@@ -1,0 +1,25 @@
+{
+  "name": "hdb-typescript-best-practices",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env dist/index.js",
+    "start:dev": "NODE_OPTIONS='--loader=tsx' node --env-file=.env src/index.ts"
+  },
+  "keywords": [],
+  "author": "Lucas Santos <hello@lsantos.dev> (https://lsantos.dev/)",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^20.7.1",
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.2.0",
+    "@hono/zod-validator": "^0.1.9",
+    "hono": "^3.7.3",
+    "zod": "^3.22.2"
+  }
+}

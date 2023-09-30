@@ -1,0 +1,14 @@
+services:
+    harper:
+      image: harperdb/harperdb:latest
+      container_name: harperdb
+      ports:
+        - 9925:9925
+        - 9926:9926
+      volumes:
+        - ./harperdb:/opt/harperdb/hdb/custom_functions
+      environment:
+        - HDB_ADMIN_USERNAME=admin
+        - HDB_ADMIN_PASSWORD=admin
+        - LOG_LEVEL=error
+        - RUN_IN_FOREGROUND=true
